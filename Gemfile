@@ -36,6 +36,8 @@ gem "figaro"
 
 gem "puma"
 
+gem 'omniauth-facebook'
+
 gem 'decent_exposure', '2.3.0'
 
 group :development, :test do

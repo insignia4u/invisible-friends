@@ -1,4 +1,7 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
+require 'simplecov'
+SimpleCov.start
+
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
@@ -44,4 +47,34 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
+
+  OmniAuth.config.test_mode = true
+
+  def auth_data valid
+
+    auth = OmniAuth::AuthHash.new(
+  {
+    provider: 'facebook',
+    uid:'123545',
+    info: {
+      email: valid ? 'mail@mail.com' : '',
+    },
+    extra: {
+      raw_info:{
+        name: valid ? 'Juan' : '',
+      }
+    },
+    credentials: {
+      token: 'some_token',
+      expires_at: 1234
+    }
+  })
+    auth
+  end
+
+  def authenticate_user
+    OmniAuth.config.mock_auth[:facebook] = auth_data true
+    click_on "Sign in with Facebook"    
+  end
+
 end

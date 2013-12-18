@@ -1,2 +1,9 @@
 development:
-  SECRET_TOKEN: 'some secret token'
+  SECRET_TOKEN: 'some token'
+  FACEBOOK_APP_ID: 'some app id'
+  FACEBOOK_SECRET: 'some secret'
+
+test:
+  SECRET_TOKEN: 'some token'
+  FACEBOOK_APP_ID: 'some app id'
+  FACEBOOK_SECRET: 'some secret'
