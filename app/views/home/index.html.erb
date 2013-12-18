@@ -1,0 +1,10 @@
+<h1>Invisible Friends Game</h1>
+<% if notice %>
+  <%= notice %><br/>
+<% end %>
+<% if current_user %>
+  <%= current_user.name %> |
+  <%= link_to "Sign Out", "/signout" %>
+<% else %>
+  <%= link_to "Sign in with Facebook", "/auth/facebook" %>
+<% end %>
