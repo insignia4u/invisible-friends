@@ -3,7 +3,7 @@ require 'spec_helper'
 describe User do
   
   it "creates an user with valid data" do
-    data = auth_data true
+    data = auth_data(true)
     user = User.from_omniauth data
 
     expect(user).not_to be_nil
@@ -16,9 +16,9 @@ describe User do
   end
 
   it "attempts to create an user with invalid data" do
-    data = auth_data false
+    data = auth_data(false)
 
-    expect{ User.from_omniauth data }.to raise_error
+    expect(User.from_omniauth data).to be_new_record
     expect(User.find_by(uid: data.uid)).to be_nil 
   end
 
