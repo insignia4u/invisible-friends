@@ -69,11 +69,19 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    date_validator (0.7.0)
+      activemodel (>= 3)
     decent_exposure (2.3.0)
     diff-lcs (1.2.5)
     docile (1.1.1)
+    dynamic_form (1.1.4)
     erubis (2.7.0)
     execjs (2.0.2)
+    factory_girl (4.3.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.3.0)
+      factory_girl (~> 4.3.0)
+      railties (>= 3.0.0)
     faraday (0.8.8)
       multipart-post (~> 1.2.0)
     figaro (0.7.0)
@@ -193,7 +201,10 @@ DEPENDENCIES
   capybara-email!
   coffee-rails (~> 4.0.0)
   database_cleaner!
+  date_validator
   decent_exposure (= 2.3.0)
+  dynamic_form
+  factory_girl_rails (~> 4.0)
   figaro
   jbuilder (~> 1.2)
   jquery-rails
