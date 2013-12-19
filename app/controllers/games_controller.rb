@@ -1,5 +1,6 @@
 class GamesController < ApplicationController
 
+  before_action :authorize_user
   expose(:games) { current_user.games }
   expose(:game, attributes: :game_params)
 
@@ -12,6 +13,9 @@ class GamesController < ApplicationController
     else
       render :new
     end
+  end
+
+  def index
   end
 
   protected

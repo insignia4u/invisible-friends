@@ -1,6 +1,8 @@
 class FriendsController < ApplicationController
 
-  expose(:game){ current_user.games.find_by(id: params[:id]) }
+  before_action :authorize_user
+
+  expose(:game){ current_user.games.find(params[:game_id]) }
 
   def index
   end
