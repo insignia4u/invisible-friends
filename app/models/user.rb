@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
   validates :uid, uniqueness: true
   validates :email, uniqueness: true, presence: true
 
+  has_many :games
+
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
       user.provider         = auth.provider
