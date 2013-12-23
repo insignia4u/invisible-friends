@@ -1,9 +1,10 @@
 class User < ActiveRecord::Base
   validates :name, presence: true
-  validates :uid, uniqueness: true
   validates :email, uniqueness: true, presence: true
 
   has_many :games
+  has_many :game_invitations
+  has_many :games_where_invited, through: :game_invitations, source: :game
 
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|

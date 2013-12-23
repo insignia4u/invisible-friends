@@ -1,0 +1,9 @@
+<h1>New friend</h1>
+<%= form_for invitation_manager, url: game_friends_path do |f| %>
+  <%= error_messages_for(invitation_manager) %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <%= f.submit 'Add to Game' %>
+<% end %>

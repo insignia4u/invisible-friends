@@ -34,6 +34,8 @@ gem 'date_validator'
 
 gem 'dynamic_form'
 
+gem 'virtus'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails', github: 'rspec/rspec-rails',

@@ -2,8 +2,20 @@ development:
   SECRET_TOKEN: 'some token'
   FACEBOOK_APP_ID: 'some app id'
   FACEBOOK_SECRET: 'some secret'
+  MAIL_SMTP_SERVER: 'smtp.somemailservice.com'
+  MAIL_SMTP_PORT: 587
+  MAIL_DOMAIN: 'someDomain.com'
+  MAIL_AUTHENTICATION: 'plain'
+  MAIL_USER_NAME: 'username'
+  MAIL_PASSWORD: 'password'
 
 test:
   SECRET_TOKEN: 'some token'
   FACEBOOK_APP_ID: 'some app id'
   FACEBOOK_SECRET: 'some secret'
+  MAIL_SMTP_SERVER: 'smtp.somemailservice.com'
+  MAIL_SMTP_PORT: 587
+  MAIL_DOMAIN: 'someDomain.com'
+  MAIL_AUTHENTICATION: 'plain'
+  MAIL_USER_NAME: 'username'
+  MAIL_PASSWORD: 'password'
