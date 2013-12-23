@@ -11,13 +11,4 @@ class Game < ActiveRecord::Base
     message: 'must be a future date'
   }
 
-  def add_friend(user)
-    if self.friends.find_by(id: user.id).nil?
-      self.friends << user
-      FriendNotifier.added_to_game(user, self).deliver
-      return true
-    end
-    return false
-  end
-
 end

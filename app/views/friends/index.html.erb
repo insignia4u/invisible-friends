@@ -6,9 +6,11 @@
 <%= link_to 'Add a friend', new_game_friend_path(game) %>
 <h3>Friends invited:</h3>
 <% unless friends.empty? %>
+  <ul>
   <% friends.each do |f| %>
-    <%= f.name %>
+    <li><%= f.name %> (<%= f.email %>)</li>
   <% end %>
+  </ul>
 <% else %>
   No friends invited yet.
 <% end %>

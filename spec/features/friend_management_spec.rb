@@ -20,8 +20,8 @@ feature 'Friend management' do
 
     click_on('Add a friend')
 
-    fill_in 'user[name]', with: "Tony Stark"
-    fill_in 'user[email]', with: "tony@starkinc.com"
+    fill_in 'invitation_manager[name]', with: "Tony Stark"
+    fill_in 'invitation_manager[email]', with: "tony@starkinc.com"
 
     clear_emails
     expect { click_on('Add to Game') }.to change { @game.friends.count }.by(1)
@@ -43,8 +43,8 @@ feature 'Friend management' do
 
     click_on('Add a friend')
 
-    fill_in 'user[name]', with: friend.name
-    fill_in 'user[email]', with: friend.email
+    fill_in 'invitation_manager[name]', with: friend.name
+    fill_in 'invitation_manager[email]', with: friend.email
 
     clear_emails
     expect { click_on('Add to Game') }.to change { @game.friends.count }.by(1)

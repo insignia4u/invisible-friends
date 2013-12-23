@@ -4,6 +4,8 @@ describe User do
 
   describe "Associations" do
     it { should have_many(:games) }
+    it { should have_many(:games_where_invited) }
+
   end
 
   describe "Validations" do
