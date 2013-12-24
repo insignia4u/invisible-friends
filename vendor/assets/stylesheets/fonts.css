@@ -1,0 +1,217 @@
+/* Títulos */
+
+h1, h2, h3, h4, h5 {
+	font-size:inherit;
+	font-weight:normal !important;
+	margin:0;
+	padding:0;
+	}
+
+th {
+	font-family:'OpenSansSemibold',Arial,sans-serif;
+	font-weight:normal;
+	}
+
+h2,
+h2 strong
+{
+	color:#AA0411;
+	font:60px/60px 'BebasNeue',Arial,sans-serif;
+	text-shadow:#fff 1px 1px 0;
+	margin-left: 255px;
+	}
+
+h3 {
+	color:#4A671E;
+	font:40px/40px 'BebasNeue',Arial,sans-serif;
+	text-shadow:#fff 1px 1px 0;
+	margin-bottom: 20px;
+}
+
+h3.eligeRegalos span.chicklets {
+ 	font-size:15px !important;
+	}
+h3.borraRegalos span.chicklets {
+ 	font-size:15px !important;
+	}
+
+#anon_popup h2,
+#custom_popup h2,
+#preview_popup h2,
+.destacado h3,
+#exclusiones h2 {
+	font-size:40px;
+	line-height:40px;
+	}
+.destacado h3 {
+	color:#4A671E;
+	margin-bottom: 10px;
+	}
+.destacado h4 { font-size:20px; }
+
+#preview_popup h3 {
+	color:#000;
+	font:20px/25px 'OpenSansSemibold',Arial,sans-serif;
+	}
+
+
+/* Resto de fuentes */
+
+p { margin:0 0 10px 0; }
+
+p.infoSecundaria {
+	font-size:15px;
+	line-height:22px;
+	}
+
+strong {
+	font-family:'OpenSansSemibold',Arial,sans-serif;
+	font-weight:normal;
+	}
+
+a.add_friend:hover,
+a.subirExcel:hover {
+	text-decoration:none;
+	}
+
+#cajaDescargaApp {
+	color:#94A57F;
+	font-size:14px;
+	line-height:15px;
+	}
+
+#descargaApp {
+	color:#fff;
+	font-size:15px;
+	line-height:20px;
+	}
+#descargaApp a 		 { color:#fff; }
+#descargaApp a:hover { color:#E2E2E2; text-decoration:none; }
+
+.filtro,
+#email_p {
+	color:#94A57F;
+	font-size:17px;
+	line-height:30px;
+	}
+.filtro h3 {
+	color:#4A671E;
+	font:32px/32px 'BebasNeue',Arial,sans-serif;
+	text-shadow:#fff 1px 1px 0;
+	}
+
+#footer {
+	color:#9DB188;
+	font-size:12px;
+	line-height:20px;
+	text-align:center;
+	}
+#footer a 		{ color:#849373; }
+#footer a:hover { color:#59674D; }
+
+ol.listaPasos.mini li.selected {
+	color:#000;
+	}
+ol.listaPasos.mini li.selected span {
+	font-weight:bold;
+	}
+
+#custom2 .regalo .title,
+.regalo .title {
+	font-size:15px;
+	line-height:20px;
+	}
+#custom2 .regalo .title,
+.regalo .title a 			   { color:#565656; }
+.regalo .title a:hover,
+.regalo .title.sugerir a:hover { color:#E04649; text-decoration:none; }
+
+.regalo .title.sugerir {
+	font-size:18px;
+	line-height:25px;
+	text-align:center;
+	}
+.regalo .title.sugerir a {
+	color:#B2B2B2;
+	}
+
+.price {
+	text-align:right;
+	}
+.price span.descuento {
+	color:#4A671E;
+	font-size:18px;
+	}
+.price span.precio {
+	color:#000;
+	font-family:'BebasNeue',Arial,sans-serif;
+	font-size:30px;
+	}
+
+#privacy_p,
+.mapa p {
+	font-size:12px;
+	line-height:15px;
+	}
+.mapa h4 {
+	color:#000;
+	font:15px/20px 'OpenSansSemibold',Arial,sans-serif;
+	}
+
+.recupera {;
+	font-size:14px;
+	line-height:20px;
+	}
+.recupera strong {
+	color:#333;
+	}
+
+
+/* Propiedades para sobreescribir lo que carga http://w.sharethis.com/button/buttons.js */
+.cajaTextoIntro p span span {
+	color:#3F4C32 !important;
+	font:inherit !important;
+	}
+.cajaTextoIntro p span span span  {
+	background-image:none !important;
+	background:url(../img/sprite-iconos-compartir.gif) no-repeat !important;
+	height:23px !important;
+	margin:5px 0;
+	padding-left:25px !important;
+	}
+.cajaTextoIntro p span .stButton .facebook { background-position:0 3px !important; }
+.cajaTextoIntro p span .stButton .twitter  { background-position:0 -20px !important; }
+.cajaTextoIntro p span .stButton .email    { background-position:0 -43px !important; }
+
+
+/* Paquetes de fuentes */
+@font-face {
+    font-family:'OpenSansRegular';
+    src:url('/fonts/OpenSans-Regular-webfont.eot');
+    src:url('/fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/OpenSans-Regular-webfont.woff') format('woff'),
+        url('/fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
+        url('/fonts/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');
+    font-weight:normal;
+    font-style:normal;
+	}
+@font-face {
+    font-family:'OpenSansSemibold';
+    src: url('/fonts/OpenSans-Semibold-webfont.eot');
+    src: url('/fonts/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/OpenSans-Semibold-webfont.woff') format('woff'),
+         url('/fonts/OpenSans-Semibold-webfont.ttf') format('truetype'),
+         url('/fonts/OpenSans-Semibold-webfont.svg#OpenSansBold') format('svg');
+    font-weight:normal;
+    font-style:normal;
+	}
+@font-face {
+    font-family:'BebasNeue';
+    src:url('/fonts/BebasNeue-webfont.eot');
+    src:url('/fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/BebasNeue-webfont.woff') format('woff'),
+        url('/fonts/BebasNeue-webfont.ttf') format('truetype'),
+        url('/fonts/BebasNeue-webfont.svg#BebasNeue') format('svg');
+    font-weight:normal;
+    font-style:normal;
+	}

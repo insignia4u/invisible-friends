@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>InvisibleFriends</title>
+  <title>Invisible Friends Game</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div id="container">
+    <header>
+      <div id="banner">
+        <%= image_tag("/assets/present-box.png", size: "200x200") %>
+        <ul id="login">
+          <% if current_user %>
+            <li><%= current_user.name %></li>
+            <li><%= link_to "Sign Out", "/signout" %></li>
+          <% end %>
+        </ul>
+      </div>
+    </header>
+    <h2>Invisible Friends Game</h2>
+    <%= yield %>
+    <footer></footer>
+  </div>
 </body>
 </html>

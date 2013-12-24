@@ -1,10 +1,9 @@
-<h1><b>Your friends will be here</b></h1>
+<h3>Game: <%= game.name %></h3>
 <% if notice %>
   <%= notice %>
 <% end %>
-<h2>Game: <%= game.name %></h2>
-<%= link_to 'Add a friend', new_game_friend_path(game) %>
-<h3>Friends invited:</h3>
+<%= link_to 'Add a friend', new_game_friend_path(game) %><br/>
+<h4>Friends invited:</h4>
 <% unless friends.empty? %>
   <ul>
   <% friends.each do |f| %>
