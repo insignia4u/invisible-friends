@@ -1,13 +1,13 @@
 <h3>Game: <%= game.name %></h3>
 <% if notice %>
-  <%= notice %>
+  <%= notice %><br/>
 <% end %>
-<%= link_to 'Add a friend', new_game_friend_path(game) %><br/>
+<%= link_to 'Add a friend', new_game_friend_path(game) %>
 <h4>Friends invited:</h4>
 <% unless friends.empty? %>
   <ul>
   <% friends.each do |f| %>
-    <li><%= f.name %> (<%= f.email %>)</li>
+    <li><%= f.name %> (<%= f.email %>) <%= link_to "Remove", game_friend_path(game,f), method: :delete %></li>
   <% end %>
   </ul>
 <% else %>

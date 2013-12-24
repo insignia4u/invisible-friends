@@ -13,7 +13,7 @@ class InvitationManager
   def invite
     return false unless valid?
     game.friends << user
-    FriendNotifier.added_to_game(user, game).deliver
+    #FriendNotifier.added_to_game(user, game).deliver
   end
 
 protected
