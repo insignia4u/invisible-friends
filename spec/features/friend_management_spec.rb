@@ -72,4 +72,10 @@ feature 'Friend management' do
 
   end
 
+  scenario 'Removing a friend from a game' do
+
+    save_and_open_page
+
+  end
+
 end

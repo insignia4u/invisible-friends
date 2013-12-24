@@ -1,10 +1,9 @@
-Organice your Invisible Friends Game, just sign in with your Facebook account and start adding friends (? <br/>
-We will send you an email telling you lorem lorem lorem lipsun<br/><br/>
+Organice your Invisible Friends Game, just sign in with your Facebook account and start adding friends (? <br/><br/>
 <% if notice %>
   <%= notice %><br/>
 <% end %>
 <% if current_user %>
   <%= link_to "Add New Game", new_game_path %>
 <% else %>
-  <%= link_to image_tag("/assets/loginfb.png", size: "240x115"), "/auth/facebook" %>
+  <%= link_to image_tag("/assets/loginfb.png", size: "240x115", alt: "Sign in with Facebook"), "/auth/facebook" %>
 <% end %>
