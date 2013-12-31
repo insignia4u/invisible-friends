@@ -38,7 +38,6 @@ feature 'Friend management' do
 
   scenario 'Adding an existing friend to a game' do
 
-    # ya creado antes
     friend = create(:user)
 
     click_on('Add a friend')
@@ -61,20 +60,26 @@ feature 'Friend management' do
 
   scenario 'Adding a friend to a game with invalid data' do
 
-     click_on('Add a friend')
-     click_on('Add to Game')
-
-     expect(current_path).to eq game_friends_path(@game)
-
-     expect(page).to have_content "Name can't be blank"
-     expect(page).to have_content "Email can't be blank"
-
+    click_on('Add a friend')
+    click_on('Add to Game')
+    expect(current_path).to eq game_friends_path(@game)
+    expect(page).to have_content "Name can't be blank"
+    expect(page).to have_content "Email can't be blank"
 
   end
 
   scenario 'Removing a friend from a game' do
 
-    save_and_open_page
+    friend = create(:user)
+    click_on('Add a friend')
+    fill_in 'invitation_manager[name]', with: friend.name
+    fill_in 'invitation_manager[email]', with: friend.email
+    click_on('Add to Game')
+
+    expect(current_path).to eq game_friends_path(@game)
+    expect { click_on("Remove") }.to change{ @game.friends.count }.by(-1)
+    expect(page).to have_content 'User removed from the game'
+
 
   end
 

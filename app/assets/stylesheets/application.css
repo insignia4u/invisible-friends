@@ -1,5 +1,11 @@
+/*
+ *= require bootstrap-datepicker
+ */
+
 @import url("header.css");
 @import url("color.css");
 @import url("fonts.css");
 @import url("forms.css");
 @import url("layout.css");
+
+

@@ -58,6 +58,8 @@ GEM
     axiom-types (0.0.5)
       descendants_tracker (~> 0.0.1)
       ice_nine (~> 0.9)
+    bootstrap-datepicker-rails (1.1.1.11)
+      railties (>= 3.0)
     builder (3.1.4)
     capybara (2.2.0)
       mime-types (>= 1.16)
@@ -210,6 +212,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-datepicker-rails
   capybara (= 2.2.0)
   capybara-email!
   coffee-rails (~> 4.0.0)
