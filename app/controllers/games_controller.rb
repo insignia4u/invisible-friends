@@ -18,6 +18,21 @@ class GamesController < ApplicationController
   def index
   end
 
+  def destroy
+    game.destroy
+    redirect_to root_path(), notice: "Game erased"
+  end
+
+  def shuffle
+    Shuffler.new(game).shuffle!
+    redirect_to root_path, notice: "Invitations sent"
+  end
+
+  def resend_notifications
+    game.resend_notifications
+    redirect_to root_path, notice: "Invitations sent"
+  end
+
   protected
   def game_params
      params.require(:game).permit(:name, :scheduled_on, :description)

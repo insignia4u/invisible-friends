@@ -10,7 +10,7 @@
   <div id="container">
     <header>
       <div id="banner">
-        <%= image_tag("/assets/present-box.png", size: "200x200") %>
+        <%= link_to image_tag("/assets/present-box.png", size: "200x200"), root_path %>
         <ul id="login">
           <% if current_user %>
             <li><%= current_user.name %></li>

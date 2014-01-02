@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131223002023) do
+ActiveRecord::Schema.define(version: 20140102172326) do
+
+  create_table "friend_assignments", force: true do |t|
+    t.integer  "game_id"
+    t.integer  "giver_id"
+    t.integer  "receiver_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "friend_assignments", ["game_id"], name: "index_friend_assignments_on_game_id"
+  add_index "friend_assignments", ["giver_id"], name: "index_friend_assignments_on_giver_id"
+  add_index "friend_assignments", ["receiver_id"], name: "index_friend_assignments_on_receiver_id"
 
   create_table "friends", force: true do |t|
     t.string   "name"

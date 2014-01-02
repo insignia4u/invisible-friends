@@ -70,7 +70,7 @@ feature 'Friend management' do
 
   scenario 'Removing a friend from a game' do
 
-    friend = create(:user)
+    friend = build(:user)
     click_on('Add a friend')
     fill_in 'invitation_manager[name]', with: friend.name
     fill_in 'invitation_manager[email]', with: friend.email
@@ -80,6 +80,23 @@ feature 'Friend management' do
     expect { click_on("Remove") }.to change{ @game.friends.count }.by(-1)
     expect(page).to have_content 'User removed from the game'
 
+  end
+
+  scenario 'Attempt to add a friend twice' do
+
+    friend = build(:user)
+    click_on('Add a friend')
+    fill_in 'invitation_manager[name]', with: friend.name
+    fill_in 'invitation_manager[email]', with: friend.email
+    click_on('Add to Game')
+
+    click_on('Add a friend')
+    fill_in 'invitation_manager[name]', with: friend.name
+    fill_in 'invitation_manager[email]', with: friend.email
+    click_on('Add to Game')
+
+    expect(current_path).to eq game_friends_path(@game)
+    expect(page).to have_content("User #{ friend.name } (#{ friend.email }) is already invited to the game")
 
   end
 

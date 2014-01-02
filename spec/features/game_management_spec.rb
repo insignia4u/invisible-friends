@@ -5,7 +5,6 @@ feature "game management" do
   background do
     visit '/'
     @data= auth_data
-
     sign_in_with_facebook @data
   end
 
@@ -41,6 +40,23 @@ feature "game management" do
     expect(current_path).to eq "/games"
     expect(page).to have_content("Name can't be blank")
     expect(page).to have_content("must be a future date")
+  end
+
+  scenario "Delete a game" do
+    game = create(:game)
+    friend = create(:friend)
+
+    game.friends << friend
+
+    User.find_by(uid: @data.uid).games << game
+
+    visit "/"
+
+    expect{ click_on('Remove') }.to change{ Game.count }.by(-1)
+
+    expect(Game.find_by(id: game.id)).to be_nil
+    expect(GameInvitation.find_by(game_id: game.id)).to be_nil
+
   end
 
 end

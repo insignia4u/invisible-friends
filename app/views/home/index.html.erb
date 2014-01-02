@@ -1,9 +1,28 @@
 Organice your Invisible Friends Game, just sign in with your Facebook account and start adding friends! <br/><br/>
 <% if notice %>
-  <%= notice %><br/>
+  <%= notice %><br/><br/>
 <% end %>
 <% if current_user %>
   <%= link_to "Add New Game", new_game_path %>
+  <% if games.count > 0 %>
+    <h3>Your Games</h3>
+  <% end %>
+  <table>
+    <% games.each do |game| %>
+      <tr>
+        <td><%= game.name %></td>
+        <td><%= link_to "Remove", game_path(game), method: :delete %></td>
+        <td>
+          <% if game.friend_assignments.count == 0 %>
+            <%= link_to "Shuffle", game_shuffle_path(game) %>
+          <% else %>
+            <%= link_to "Resend", game_resend_path(game) %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+   </table>
 <% else %>
   <%= link_to image_tag("/assets/loginfb.png", size: "240x115", alt: "Sign in with Facebook"), "/auth/facebook" %>
 <% end %>
+

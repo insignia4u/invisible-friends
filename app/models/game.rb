@@ -1,8 +1,9 @@
 class Game < ActiveRecord::Base
 
   belongs_to :user
-  has_many :game_invitations
+  has_many :game_invitations, dependent: :destroy
   has_many :friends, through: :game_invitations, source: :user
+  has_many :friend_assignments, dependent: :destroy
 
 
   validates :name, :user, presence: true
@@ -11,4 +12,10 @@ class Game < ActiveRecord::Base
     message: 'must be a future date'
   }
 
+  def resend_notifications
+    friend_assignments.each do |fa|
+      FriendNotifier.notify_assignment(fa).deliver
+    end
+
+  end
 end
