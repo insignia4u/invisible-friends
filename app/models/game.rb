@@ -12,10 +12,4 @@ class Game < ActiveRecord::Base
     message: 'must be a future date'
   }
 
-  def resend_notifications
-    friend_assignments.each do |fa|
-      FriendNotifier.notify_assignment(fa).deliver
-    end
-
-  end
 end

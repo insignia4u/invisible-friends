@@ -29,7 +29,7 @@ class GamesController < ApplicationController
   end
 
   def resend_notifications
-    game.resend_notifications
+    NotificationResender.new(game).resend_notifications
     redirect_to root_path, notice: "Invitations sent"
   end
 
