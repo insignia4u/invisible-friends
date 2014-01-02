@@ -27,7 +27,7 @@ InvisibleFriends::Application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  config.assets.compile = true
 
   # Generate digests for assets URLs.
   config.assets.digest = true
@@ -77,5 +77,17 @@ InvisibleFriends::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:  ENV['MAIL_SMTP_SERVER'],
+    port:  ENV['MAIL_SMTP_PORT'],
+    domain:  ENV['MAIL_DOMAIN'],
+    authentication: ENV['MAIL_AUTHENTICATION'],
+    user_name: ENV['MAIL_USER_NAME'],
+    password:  ENV['MAIL_PASSWORD'],
+    enable_starttls_auto: true
+   }
 
 end
