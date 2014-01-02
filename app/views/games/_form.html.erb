@@ -8,16 +8,23 @@
 
   <div class='field'>
     <%= f.label :scheduled_on %>
-    <%= f.text_field :scheduled_on %>
+    <%= f.text_field :scheduled_on, placeholder: "Must be a future date", class: "datepicker" %>
   </div>
 
   <div class='field'>
     <%= f.label :description %>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, placeholder: "Gift types, price ranges..." %>
   </div>
 
   <div class='action'>
-    <%= f.submit "Save" %>
+    <%= f.submit "Create Game" %>
   </div>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      console.log("datepickeando")
+      $('.datepicker').datepicker();
+    })
+  </script>
 
 <% end %>

@@ -24,4 +24,9 @@ class FriendsController < ApplicationController
     end
   end
 
+  def destroy
+    game.game_invitations.find_by(user_id: params[:id]).destroy
+    redirect_to game_friends_path(game), notice: "User removed from the game"
+  end
+
 end

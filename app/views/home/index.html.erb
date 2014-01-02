@@ -1,12 +1,9 @@
-<h1>Invisible Friends Game</h1>
+Organice your Invisible Friends Game, just sign in with your Facebook account and start adding friends! <br/><br/>
 <% if notice %>
   <%= notice %><br/>
 <% end %>
 <% if current_user %>
-  <%= current_user.name %> |
-  <%= link_to "Sign Out", "/signout" %>
-  <br/><br/>
   <%= link_to "Add New Game", new_game_path %>
 <% else %>
-  <%= link_to "Sign in with Facebook", "/auth/facebook" %>
+  <%= link_to image_tag("/assets/loginfb.png", size: "240x115", alt: "Sign in with Facebook"), "/auth/facebook" %>
 <% end %>

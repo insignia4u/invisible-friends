@@ -1,0 +1,65 @@
+h3.eligeRegalos {
+	background:#F2F4EF url(../img/muestra-ico-guardar.gif) 15px 15px no-repeat;
+	border-top:#DDE5D3 solid 1px;
+	}
+h3.borraRegalos {
+	background:#F2F4EF url(../img/muestra-ico-borrar.gif) 15px 15px no-repeat;
+	border-bottom:#DDE5D3 solid 1px;
+	}
+
+.add_friend,
+.subirExcel { border:#DDE5D3 solid 1px; }
+.add_friend { background:#F2F4EF url(/site_media/img/ico-mas.gif) 15px 15px no-repeat; }
+.subirExcel { background:#F2F4EF url(/site_media/img/excel.png) 15px 15px no-repeat; }
+
+#anon_popup,
+#custom_popup,
+#preview_popup { background-color:#ECF2E6; }
+
+#descargaApp		   { background:url(../img/construccion/fondo-negro.png) repeat; }
+#descargaApp p a 	   { background:url(../img/sprite-ico-android.png) 30px 0px no-repeat; }
+#descargaApp p a:hover { background:url(../img/sprite-ico-android.png) 30px -55px no-repeat; }
+
+.filtro { background:url(../img/construccion/fondo-filtro.jpg) repeat; }
+	
+#footer 		    { background:#CDD8C0 url(../img/construccion/pie-borde.gif) top repeat-x; }
+#footer #datosPie   { border-top:#DDE5D3 solid 1px; }
+#footer #enlacesPie { border-bottom:#BDCCA8 solid 1px; }
+
+.regalo .icons a.icon.mark_descarte,
+.regalo .icons a.icon.mark_sugerencia 	  		{ background-color:#D3D3D3; }
+.regalo .icons a:hover.icon.mark_descarte		{ background-color:#D00A10; }
+.regalo .icons a:hover.icon.mark_sugerencia 	{ background-color:#649907; }
+.regalo.destacado .icons a.icon.mark_sugerencia { background-color:#649907; }
+
+.regalo .imagen .marco {
+	box-shadow:#ccc 0 0 3px inset;
+	left:16px;
+	position:absolute;
+	top:16px;
+	width:206px;
+	z-index:10;
+	}
+.regalo .imagen a:hover .marco 	{ box-shadow:#E97F75 0 0 3px inset; }
+.regalo .imagen img 			{ z-index:5; }
+.regalo .imagen.sugerir 		{ background-color:#E8E8E8;	}
+
+.recupera {	background:#F2F4EF; }
+
+ol.listaPasos li.item01 { background:url(../img/construccion/item-1.png) 0 5px no-repeat; }
+ol.listaPasos li.item02 { background:url(../img/construccion/item-2.png) 0 5px no-repeat; }
+ol.listaPasos li.item03 { background:url(../img/construccion/item-3.png) 0 5px no-repeat; }
+ol.listaPasos li.item04 { background:url(../img/construccion/item-4.png) 0 5px no-repeat; }
+ol.listaPasos li.item05 { background:url(../img/construccion/item-5.png) 0 5px no-repeat; }
+ol.listaPasos.mini li 	{ background-size:20px auto; }
+
+#custom2 .regalo,
+.fichaRegalo,
+ul.ofertas_ul li .regalo {
+	background-color:#FFF;
+	border:#DDE5D3 solid 1px;
+	}
+ul.ofertas_ul li .regalo.destacado {
+	border-color:#CDDBAF;
+	background-color:#FFF;
+	}

@@ -18,7 +18,7 @@ feature "game management" do
     fill_in "game[description]", with: game.description
 
     expect {
-      click_on("Save")
+      click_on("Create Game")
     }.to change { Game.count }.by(1)
 
     saved_game = Game.last
@@ -35,7 +35,7 @@ feature "game management" do
     click_on("Add New Game")
 
     expect {
-      click_on("Save")
+      click_on("Create Game")
     }.not_to change { Game.count }.by(1)
 
     expect(current_path).to eq "/games"

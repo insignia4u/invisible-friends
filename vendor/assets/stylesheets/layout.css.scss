@@ -1,0 +1,373 @@
+html {
+  overflow:hidden;
+  overflow-y:scroll;
+}
+
+html, body {
+  background: #ECF2E6 url(/assets/fondo.jpg) repeat;
+  color:#59674D;
+  font:16px/25px 'OpenSansRegular',Arial,sans-serif;
+  margin:0;
+  padding:0;
+}
+
+a {
+  color:#E04649;
+  text-decoration:none;
+}
+
+a:hover {
+  color:#E97F75;
+  text-decoration:underline;
+}
+
+label{
+	/*margin-top: 10px;*/
+	font-family: 'OpenSansSemibold',Arial,sans-serif;
+	font-weight: bold;
+}
+
+
+.field_with_errors{
+	display: inline;
+}
+
+.field {
+width: 320px;
+height: 50px;
+}
+
+.field input, .field textarea{
+	float: right;
+}
+
+.action{
+	margin-top: 20px;
+}
+
+
+#errorExplanation h2{
+	color:#AA0411;
+	font:17px/17px 'OpenSansSemibold',Arial,sans-serif;
+	text-shadow:#fff 1px 1px 0;
+		margin-left: 0px;
+}
+
+ul{
+	list-style:disc outside none;
+	margin-left: 20px;
+}
+
+h4{
+	font:21px/21px 'OpenSansSemibold',Arial,sans-serif;
+	text-shadow:#fff 1px 1px 0;
+	margin-left: 0px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+}
+
+#errorExplanation{
+	margin-bottom: 20px;
+}
+
+#container {
+  margin: 0 auto;
+  width: 1000px;
+}
+
+
+h2 { margin-bottom:25px; }
+
+h3.eligeRegalos {
+	margin:15px 0 0 0;
+	padding:12px 15px 0px 47px;
+	}
+h3.borraRegalos {
+	margin:0 0 15px 0;
+	padding:12px 15px 12px 47px;
+	}
+
+.add_friend,
+.subirExcel {
+	margin:15px 0;
+	padding:12px 15px 12px 47px;
+	}
+.subirExcel {
+	margin-left:10px;
+	padding-left:40px;
+	}
+
+#container {
+	margin:0 auto;
+	width:1000px;
+	}
+
+#cajaDescargaApp {
+	float:right;
+	margin-top:-10px;
+	}
+
+.caja_instrucciones {
+	width:100%;
+	}
+
+#cajaOfertas {
+	clear:both;
+	margin:20px auto;
+	width:1000px;
+	}
+
+.cajaTextoIntro {
+	clear:both;
+	margin-right:16px;
+	width:492px;
+	}
+
+.cargando {
+	text-align:center;
+	margin:150px auto 0 auto;
+	}
+.cargando p {
+	margin-top:20px;
+	}
+
+.clear {
+	clear:both;
+	}
+
+#anon_popup,
+#custom_popup,
+#preview_popup,
+#exclusiones {
+	padding:40px;
+	width:490px;
+	}
+
+#custom2 .regalo {
+	margin:10px 20px 0 0;
+	padding:15px;
+	width:206px;
+	}
+#custom2 .links a {
+	display:block;
+	height:25px;
+	width:200px;
+	text-align: center;
+	margin-top: 10px;
+	}
+#custom2 .links a:hover { text-decoration:none; }
+#custom2 .links .close 	{ clear:left; }
+
+#descargaApp {
+	float:right;
+	height:78px;
+	width:240px;
+	}
+#descargaApp p {
+	padding:5px 0;
+	margin:10px 30px 0 0;
+	}
+#descargaApp p a {
+	display:block;
+	height:44px;
+	text-align:right;
+	}
+#descargaApp p span{
+	font-size:11px;
+	}
+
+#descargaAppPanel {
+	float:right;
+	height:78px;
+	width:330px;
+	}
+#descargaAppPanel div {
+	padding:5px 0 0 0;
+	margin:10px 0px 0px 10px;
+	}
+#descargaAppPanel div a {
+	display:block;
+	height:44px;
+	text-align:right;
+	float:left;padding-left:10px;
+	}
+#descargaAppPanel span{
+	font-size:11px;color:#333;float:left;padding-left:10px;line-height:12px;
+	}
+#descargaAppPanel		   { background:url(../img/construccion/fondo-negro.png) repeat; }
+#descargaAppPanel {
+	color:#fff;
+	font-size:15px;
+	line-height:20px;
+	}
+#descargaAppPanel a 		 { color:#fff; }
+#descargaAppPanel a:hover { color:#E2E2E2; text-decoration:none; }
+
+.destacado.fuera {
+	background-color:#FFF;
+	margin:20px;
+	padding:20px;
+	width:250px;
+	}
+
+.fichaRegalo {
+	margin-bottom:40px;
+	padding:15px;
+	}
+.infoFichaRegalo {
+	margin-left:15px;
+	width:230px;
+	}
+.fichaRegalo .sug_info,
+.enlaceWeb {
+	margin-top:5px;
+	width: 100%;
+	}
+.mapa {
+	margin-top:25px;
+	}
+
+.filtro {
+	margin-bottom:10px;
+	padding:20px;
+	width:452px;
+	}
+.filtro .botonFiltro,
+.filtro .mostrar {
+	float:right;
+	width:220px;
+	}
+.filtro .margenPrecio {
+	clear:left;
+	margin-top:20px;
+	}
+.filtro .mostrar {
+	margin-bottom:20px;
+	}
+.filtro .botonFiltro {
+	clear:right;
+	}
+
+#col_right{
+	width:492px;
+}
+#footer {
+	clear:both;
+	margin-top:20px;
+	padding:30px 0;
+	}
+#footer div {
+	margin:0 auto;
+	width:1000px;
+	}
+#footer #datosPie {
+	border-top:#DDE5D3 solid 1px;
+	padding-top:30px;
+	}
+#footer #enlacesPie {
+	border-bottom:#BDCCA8 solid 1px;
+	padding-bottom:30px;
+	}
+#footer #enlacesPie p {
+	margin:0;
+	}
+
+.regalo 							  { cursor:default; }
+.regalo .icons 						  { height:33px; width:69px; }
+.regalo .icons a.icon 				  { height:33px; width:33px; }
+.regalo .icons a.icon.mark_sugerencia { margin-right:3px; }
+
+.regalo .imagen {
+	margin-bottom:5px;
+	text-align:center;
+	width:206px;
+	}
+.regalo .imagen.sugerir {
+	height:170px;
+	}
+.regalo .price,
+.regalo .title {
+	margin-bottom:10px;
+	}
+.regalo .shop {
+	clear:both;
+	float:right;
+	}
+.infoFichaRegalo .coupon {
+	text-align:center;
+	width:100%;
+	font-size:12px;
+	line-height: 14px;
+	}
+.infoFichaRegalo .coupon span{
+	font-size:14px;
+	}
+ol.listaPasos {
+	list-style:none;
+	margin:0 0 25px 0;
+	padding-left:0;
+	}
+ol.listaPasos li {
+	margin-bottom:20px;
+	padding-left:45px;
+	}
+ol.listaPasos.mini li {
+	margin-bottom:5px;
+	padding-left:30px;
+	}
+
+.price span.precio { padding-left:5px; }
+
+.recupera {
+	padding:15px 20px;
+	position:absolute;
+	right:0;
+	width:240px;
+	}
+
+#tablaSorteo {
+	clear:both;
+	}
+
+ul.ofertas_ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+	}
+ul.ofertas_ul li .regalo {
+	display:block;
+	padding:15px;
+	width:206px;
+	}
+
+/* Comunes */
+.add_friend,
+.subtitulo .instr h2,
+.caja_instrucciones,
+#cajaOfertas,
+.cajaTextoIntro,
+#custom2 .links,
+#custom2 .links a,
+#custom2 .regalo,
+.destacado.fuera,
+.enlaceWeb,
+.fichaRegalo,
+.fichaRegalo .imagen,
+.fichaRegalo h3,
+.infoFichaRegalo,
+.filtro,
+.filtro h3,
+.filtro .margenPrecio,
+.instrucciones,
+.mapa,
+.regalo .icons a.icon,
+.subirExcel,
+#tablaSorteo,
+#col_right,
+ul.ofertas_ul li  {
+	float:left;
+	position:relative;
+	}
+
+#amigos_form_table td.error{background-color:red;}

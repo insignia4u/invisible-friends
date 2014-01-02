@@ -16,7 +16,7 @@ feature "Facebook Login" do
     expect(page).to have_content valid_oauth.info.name
     expect(page).to have_content "You're logged in."
     expect(page).to have_content 'Sign Out'
-    expect(page).not_to have_content 'Sign in with Facebook'
+    page.should_not have_css("img[alt='Sign in with Facebook']")
   end
 
   scenario "signing in with an invalid account" do
@@ -32,7 +32,7 @@ feature "Facebook Login" do
     click_on 'Sign Out'
 
     expect(current_path).to eq root_path
-    expect(page).to have_content 'Sign in with Facebook'
+    page.should have_css("img[alt='Sign in with Facebook']")
     expect(page).not_to have_content 'Sign Out'
   end
 

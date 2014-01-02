@@ -36,6 +36,8 @@ gem 'dynamic_form'
 
 gem 'virtus'
 
+gem 'bootstrap-datepicker-rails'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails', github: 'rspec/rspec-rails',
